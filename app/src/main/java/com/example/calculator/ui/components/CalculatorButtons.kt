@@ -1,4 +1,4 @@
-package com.example.calculator.components
+package com.example.calculator.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 import androidx.compose.ui.unit.dp
-import com.example.calculator.viewmodel.CalculatorViewModel
+import com.example.calculator.ui.screens.CalculatorViewModel
 
 @Composable
 fun CalculatorButtons(

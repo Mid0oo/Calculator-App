@@ -1,7 +1,6 @@
-package com.example.calculator.viewmodel
+package com.example.calculator.ui.screens
 
 import androidx.lifecycle.ViewModel
-import com.example.calculator.domain.CalculatorOperations
 import com.notkamui.keval.Keval
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -118,7 +117,7 @@ class CalculatorViewModel @Inject constructor()
             .replace(Regex("""\./"""), ".0/")
 
         try{
-            val evalResult = Keval.eval(parsed)
+            val evalResult = Keval.Companion.eval(parsed)
             if (evalResult % 1 == 0.0) {
                 _result.value = evalResult.toInt().toString()
             } else {

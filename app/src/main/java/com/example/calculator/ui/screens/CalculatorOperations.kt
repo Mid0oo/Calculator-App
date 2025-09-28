@@ -1,4 +1,4 @@
-package com.example.calculator.domain
+package com.example.calculator.ui.screens
 
 interface CalculatorOperations {
     fun onClear()

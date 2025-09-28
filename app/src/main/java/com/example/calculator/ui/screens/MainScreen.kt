@@ -1,4 +1,4 @@
-package com.example.calculator.screens
+package com.example.calculator.ui.screens
 
 
 import androidx.compose.foundation.background
@@ -21,8 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.calculator.components.CalculatorButtons
-import com.example.calculator.viewmodel.CalculatorViewModel
+import com.example.calculator.ui.components.CalculatorButtons
 
 @Composable
 fun MainScreen(
