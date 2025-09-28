@@ -11,7 +11,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -20,6 +22,10 @@ fun EqualButton(onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .size(width = 72.dp, height = 160.dp)
+            .shadow(
+                elevation = 8.dp,
+                shape = CircleShape
+            )
             .clip(shape = CircleShape)
             .background(color = MaterialTheme.colorScheme.secondary)
             .clickable { onClick() },
@@ -27,4 +33,9 @@ fun EqualButton(onClick: () -> Unit) {
     ) {
         Text("=", color = Color.White, fontSize = 28.sp)
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun EqualButtonPreview(){
+    EqualButton(onClick = {})
 }
